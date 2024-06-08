@@ -2,3 +2,7 @@ body{
   direction: rtl;
   text-align: right;
 }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}

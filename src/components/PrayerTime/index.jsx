@@ -6,7 +6,7 @@ const index = () => {
   
   return (
     <div >
-    <div className='hidden md:flex items-center justify-center gap-10 lg:gap-16 relative z-20 bottom-16 inset-x-0 overflow-x-hidden pb-5'>
+    <div className='hidden md:flex items-center justify-center gap-10 lg:gap-16 relative z-20 bottom-16 inset-x-0 overflow-x-hidden pb-5 px-4'>
         <OnePrayer isNext={true}/>
         <OnePrayer isNext={false}/>
         <OnePrayer isNext={false}/>

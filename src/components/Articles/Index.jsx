@@ -5,7 +5,7 @@ import logoBg from "../../assets/navbar/logoBg.svg";
 const Index = () => {
   return (
     <div className=" py-12 relative">
-      <div className="flex flex-col items-center gap-6 w-full relative z-10">
+      <div className="flex flex-col items-center gap-1 w-full relative z-10">
         <div className="flex flex-col items-center justify-center gap-0.5">
           <h3 className="text-[#35506F] font-Tajawal text-5xl font-[800] text-center ">
             مــــــقـــــــــــالات

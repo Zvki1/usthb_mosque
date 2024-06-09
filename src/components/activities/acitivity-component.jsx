@@ -2,15 +2,17 @@ import { Button } from "../ui/button";
 import image from "../../assets/AboutUs/mobilePicture.png";
 export function AcitivityComponent() {
   return (
-    <div className="rounded-lg overflow-hidden shadow-lg w-full max-w-sm rtl">
+    <div className="rounded-lg overflow-hidden shadow-lg w-full max-w-sm md:w-1/4 rtl
+    md:hover:scale-105 transition-transform duration-500 ease-in-out">
       <div className="relative h-48 md:h-48">
         <img
           alt="Card Image"
-          className="w-full h-full "
+          className="w-full h-full 
+          hover:scale-125 transition-transform duration-500 ease-in-out object-cover object-center"
           src={image}
           width="384"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#48B09F] to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#48B09F] via-[#48b09f21] to-transparent" />
       </div>
       <div className="bg-white dark:bg-gray-950 p-4 md:p-6 space-y-3 text-right">
         <h3 className="text-2xl font-Tajawal text-[#243245] font-semibold">بطاقة العنوان</h3>

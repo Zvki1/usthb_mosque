@@ -19,7 +19,7 @@ const HeroSection = () => {
         </div>
       </div>
         <div className="absolute  bottom-0 w-full  flex items-center justify-center">
-      <img src={logoBg} alt="background" className="w-5/6 md:w-2/4 lg:w-2/6" />
+      <img src={logoBg} alt="background" className="w-5/6 md:w-2/4 lg:w-2/6 opacity-25" />
       </div>
     </section>
   );

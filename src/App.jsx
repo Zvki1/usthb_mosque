@@ -1,5 +1,6 @@
 import "./App.css";
 import AboutUs from "./components/AboutUs/Index";
+import Articles from "./components/Articles/Index";
 import HeroSection from "./components/HeroSection/HeroSection";
 import PrayerTime from "./components/PrayerTime/index"
 import Activities from "./components/activities/Index";
@@ -10,6 +11,7 @@ function App() {
       <PrayerTime />
       <AboutUs />
       <Activities />
+      <Articles/>
     </div>
   );
 }

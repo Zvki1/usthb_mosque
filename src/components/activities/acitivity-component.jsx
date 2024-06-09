@@ -1,0 +1,32 @@
+import { Button } from "../ui/button";
+import image from "../../assets/AboutUs/mobilePicture.png";
+export function AcitivityComponent() {
+  return (
+    <div className="rounded-lg overflow-hidden shadow-lg w-full max-w-sm rtl">
+      <div className="relative h-48 md:h-48">
+        <img
+          alt="Card Image"
+          className="w-full h-full "
+          src={image}
+          width="384"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#48B09F] to-transparent" />
+      </div>
+      <div className="bg-white dark:bg-gray-950 p-4 md:p-6 space-y-3 text-right">
+        <h3 className="text-2xl font-Tajawal text-[#243245] font-semibold">بطاقة العنوان</h3>
+        <p className="text-[#243245] font-medium font-Tajawal line-clamp-3">
+          هذا مقطع نص نموذجي يصل إلى 3 أسطر. قد يكون أطول من ذلك ، ولكن سيتم
+          اختصاره ليناسب تخطيط البطاقة.
+        </p>
+        <div className="flex justify-center  px-14">
+          <Button
+            className="inline-flex w-full h-9 items-center justify-center rounded-md bg-[#48B09F] px-4 py-2 text-md font-medium text-white shadow transition-colors hover:bg-green-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-green-950 disabled:pointer-events-none disabled:opacity-50"
+            
+          >
+            المــــزيـــــد
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+}

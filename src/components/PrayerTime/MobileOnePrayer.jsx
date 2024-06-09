@@ -4,7 +4,7 @@ import bgPrayer from "../../assets/prayerTime/bgPrayer.svg";
 const MobileOnePrayer = ({ isNext }) => {
   return (
     <div
-      className={`flex items-center w-4/6 justify-between p-3 rounded-xl bg-white font-medium text-lg ${
+      className={`flex items-center w-4/6 justify-between p-3 rounded-xl  font-medium text-lg ${
         isNext ? "text-white bg-[#48B09F]" : "bg-white"
       } `}
       style={{

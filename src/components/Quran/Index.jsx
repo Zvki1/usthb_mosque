@@ -1,10 +1,12 @@
+/* eslint-disable react/display-name */
+import { forwardRef } from "react";
 import subtitle from "../../assets/Activities/subtitle.svg";
 import AyaSelector from "../Quran/AyaSelector";
 import { AyaPlayer } from "./aya-player";
 
-const Index = () => {
+const Index = forwardRef((props,ref) => {
   return (
-    <div className="flex items-center flex-col py-11 gap-1 bg-gradient-to-b from-[#35506F] to-[#243245]">
+    <div className="flex items-center flex-col py-11 gap-1 bg-gradient-to-b from-[#35506F] to-[#243245]"ref={ref}>
       <div className="flex flex-col items-center justify-center gap-2  ">
         <h3 className="text-white font-Tajawal text-5xl font-[800]  ">
           القـــرآن الكـــريـــم
@@ -20,6 +22,6 @@ const Index = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Index;

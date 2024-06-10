@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   Sheet,
   SheetContent,
@@ -7,7 +8,12 @@ import {
 } from "@/components/ui/sheet";
 import menu from "../../assets/navbar/menu-02.svg";
 
-const MenuBurger = () => {
+const MenuBurger = ({
+  scrollToAbout,
+  scrollToActivities,
+  scrollToArticles,
+  scrollToQuran,
+}) => {
   return (
     <div>
       <Sheet>
@@ -22,11 +28,11 @@ const MenuBurger = () => {
             <SheetTitle className="text-white text-[32px]  font-[500] text-center">روابط</SheetTitle>
             <div className="  pt-10 flex  flex-col gap-4 items-start    font-Tajawal text-[32px]  font-[500] text-white">
               <button>الرئيسية</button>
-              <button>نشاطتنا</button>
+              <button onClick={scrollToActivities}>نشاطتنا</button>
               <button>اتصل بنا</button>
-              <button>مقالات</button>
-              <button>القرآن</button>
-              <button>حولنا</button>
+              <button onClick={scrollToArticles}>مقالات</button>
+              <button onClick={scrollToQuran}>القرآن</button>
+              <button onClick={scrollToAbout}>حولنا</button>
             </div>
           </SheetHeader>
         </SheetContent>

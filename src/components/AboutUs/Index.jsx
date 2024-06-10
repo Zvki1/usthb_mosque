@@ -1,11 +1,13 @@
+/* eslint-disable react/display-name */
 import subtitle from "../../assets/AboutUs/subtitle.svg";
 import MobilePicture from "../../assets/AboutUs/mobilePicture.png";
 import desktopPicture from "../../assets/AboutUs/desktopPictures.png";
 import motif from "../../assets/AboutUs/path6317.svg";
 import "./style.css";
-const Index = () => {
+import { forwardRef } from "react";
+const Index = forwardRef((props,ref) => {
   return (
-    <section className="relative">
+    <section className="relative" ref={ref}>
       <div className="md:hidden flex flex-col items-center justify-between pb-4 pt-3 gap-5 ">
         <div className="flex flex-col items-center justify-center gap-2">
           <h3 className="text-[#35506F] font-Tajawal text-5xl font-[800] text-center ">
@@ -52,6 +54,6 @@ const Index = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Index;

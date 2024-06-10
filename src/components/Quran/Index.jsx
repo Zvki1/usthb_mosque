@@ -1,5 +1,5 @@
-
 import subtitle from "../../assets/Activities/subtitle.svg";
+import AyaSelector from "../Quran/AyaSelector";
 import { AyaPlayer } from "./aya-player";
 
 const Index = () => {
@@ -12,6 +12,12 @@ const Index = () => {
         <img src={subtitle} alt="subtitle" className="w-full " />
       </div>
       <AyaPlayer />
+      <div className=" flex flex-col items-center gap-3 pt-5">
+        <h3 className="text-white font-Tajawal text-lg font-[500]  ">
+          اختر السورة
+        </h3>
+        <AyaSelector />
+      </div>
     </div>
   );
 };

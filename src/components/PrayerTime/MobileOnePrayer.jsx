@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import Isha from "./icons/Isha";
 import bgPrayer from "../../assets/prayerTime/bgPrayer.svg";
-const MobileOnePrayer = ({ isNext }) => {
+const MobileOnePrayer = ({ isNext,name,time }) => {
   return (
     <div
       className={`flex items-center w-4/6 justify-between p-3 rounded-xl  font-medium text-lg ${
@@ -14,9 +14,9 @@ const MobileOnePrayer = ({ isNext }) => {
     >
       <div className={`flex items-center gap-2 sm:gap-4  `}>
         <Isha fill={isNext ? "white" : "#535353"} width={28} />
-        <h3>العشاء</h3>
+        <h3>{name}</h3>
       </div>
-      <p>20:05</p>
+      <p>{time}</p>
     </div>
   );
 };

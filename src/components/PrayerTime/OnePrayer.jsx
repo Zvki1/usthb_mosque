@@ -2,7 +2,7 @@
 import Isha from "../PrayerTime/icons/Isha";
 import bgPrayer from "../../assets/prayerTime/bgPrayer.svg";
 
-const OnePrayer = ({ isNext }) => {
+const OnePrayer = ({ isNext,name,time }) => {
   return (
     <div
       className={`${
@@ -13,10 +13,10 @@ const OnePrayer = ({ isNext }) => {
         backgroundImage: `url(${bgPrayer})`,
       }}
     >
-      <h3>العشاء</h3>
+      <h3>{name}</h3>
       <Isha fill={isNext ? "white" : "#535353"}  />
 
-      <p className="text-[24px] ">20:05</p>
+      <p className="text-[24px] ">{time}</p>
     </div>
   );
 };

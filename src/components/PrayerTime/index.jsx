@@ -15,7 +15,7 @@ const index = () => {
     setisFetching(true);
     axios
       .get(
-        "http://api.aladhan.com/v1/timingsByCity?city=Oran&country=Algeria&method=19"
+        "https://api.aladhan.com/v1/timingsByCity?city=Oran&country=Algeria&method=19"
       )
       .then((response) => {
         // i want to set put the Fajr Dhuhr Asr Maghrib Isha in the array by this order

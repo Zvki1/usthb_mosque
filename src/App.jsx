@@ -26,7 +26,7 @@ function App() {
     quranSection.current.scrollIntoView({ behavior: "smooth" });
   }
   return (
-    <div className="w-screen  relative">
+    <div className="w-screen relative ">
       <HeroSection 
         scrollToAbout={scrollToAbout}
         scrollToActivities={scrollToActivities}

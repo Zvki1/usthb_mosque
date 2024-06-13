@@ -4,11 +4,11 @@ import { Slider } from "@/components/ui/slider";
 import { Button } from "@/components/ui/button";
 import { useState } from 'react';
 
-export function AyaPlayer({ audioRef, onPlayPause, onStepForward, onStepBack }) {
+export function AyaPlayer({ audioRef, onPlayPause, onStepForward, onStepBack ,suraName}) {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlayPause = () => {
-    if (isPlaying) {
+    if (!isPlaying) {
       audioRef.current.pause();
     } else {
       audioRef.current.play();
@@ -21,9 +21,9 @@ export function AyaPlayer({ audioRef, onPlayPause, onStepForward, onStepBack }) 
     <div className="flex flex-col items-center justify-center gap-2 py-3 px-3 mt-6 bg-white rounded-lg shadow-md w-5/6">
       <div className="flex flex-col items-center ">
         <h3 className="text-lg font-bold text-[#35506F] font-Tajawal">
-          ســـورة الفـــاتـــحة
+          {suraName}
         </h3>
-        <p className="text-[#35506F] font-[400] font-Tajawal">أحمد العجمي</p>
+        <p className="text-[#35506F] font-[400] font-Tajawal">الشيخ سعود الشريم</p>
       </div>
       <div className="w-full">
         <Slider
@@ -36,7 +36,7 @@ export function AyaPlayer({ audioRef, onPlayPause, onStepForward, onStepBack }) 
           <StepForward className="w-6 h-6" />
         </Button>
         <Button className="text-[#50C3B1]" size="icon" variant="ghost" onClick={handlePlayPause}>
-          {!isPlaying ? (
+          {isPlaying ? (
             <PauseIcon className="w-6 h-6" />
           ) : (
             <PlayIcon className="w-6 h-6" />

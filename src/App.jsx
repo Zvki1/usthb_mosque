@@ -6,11 +6,13 @@ import HeroSection from "./components/HeroSection/HeroSection";
 import PrayerTime from "./components/PrayerTime/index";
 import Quran from "./components/Quran/Index";
 import Activities from "./components/activities/Index";
+import ContactUs from "./components/ContactUs/ContactUs";
 function App() {
   const aboutSection = useRef(null);
   const activitiesSection = useRef(null);
   const articlesSection = useRef(null);
   const quranSection = useRef(null);
+  const contactUsSection = useRef(null);
   const scrollToAbout = () => {
     aboutSection.current.scrollIntoView({ behavior: "smooth" });
     console.log("scrolling");
@@ -25,6 +27,9 @@ function App() {
   const scrollToQuran = () => {
     quranSection.current.scrollIntoView({ behavior: "smooth" });
   }
+  const scrollToContactUs = () => {
+    contactUsSection.current.scrollIntoView({ behavior: "smooth" });
+  }
   return (
     <div className="w-screen relative ">
       <HeroSection 
@@ -32,12 +37,14 @@ function App() {
         scrollToActivities={scrollToActivities}
         scrollToArticles={scrollToArticles}
         scrollToQuran={scrollToQuran}
+        scrollToContactUs={scrollToContactUs}
       />
       <PrayerTime />
       <AboutUs ref={aboutSection} />
       <Activities ref={activitiesSection} />
       <Articles ref={articlesSection}/>
       <Quran ref={quranSection}/>
+      <ContactUs ref={contactUsSection} />
     </div>
   );
 }

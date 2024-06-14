@@ -13,6 +13,7 @@ const MenuBurger = ({
   scrollToActivities,
   scrollToArticles,
   scrollToQuran,
+  scrollToContactUs,
 }) => {
   return (
     <div>
@@ -29,7 +30,7 @@ const MenuBurger = ({
             <div className="  pt-10 flex  flex-col gap-4 items-start    font-Tajawal text-[32px]  font-[500] text-white">
               <button>الرئيسية</button>
               <button onClick={scrollToActivities}>نشاطتنا</button>
-              <button>اتصل بنا</button>
+              <button onClick={scrollToContactUs}>اتصل بنا</button>
               <button onClick={scrollToArticles}>مقالات</button>
               <button onClick={scrollToQuran}>القرآن</button>
               <button onClick={scrollToAbout}>حولنا</button>

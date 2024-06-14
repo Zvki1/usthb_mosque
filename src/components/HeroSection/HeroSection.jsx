@@ -10,6 +10,7 @@ const HeroSection = ({
   scrollToActivities,
   scrollToArticles,
   scrollToQuran,
+  scrollToContactUs,
 }) => {
   return (
     <section className="w-full relative  bg-gradient-to-b from-[#35506F] to-[#243245]">
@@ -18,6 +19,7 @@ const HeroSection = ({
         scrollToActivities={scrollToActivities}
         scrollToArticles={scrollToArticles}
         scrollToQuran={scrollToQuran}
+        scrollToContactUs={scrollToContactUs}
       />
       <div className="flex flex-col items-center  gap-6 pt-10 md:pt-16 pb-20 relative  z-10">
         <div>

@@ -8,6 +8,7 @@ const NavBar = ({
   scrollToActivities,
   scrollToArticles,
   scrollToQuran,
+  scrollToContactUs,
 }) => {
   return (
     <nav className="relative z-10">
@@ -18,6 +19,7 @@ const NavBar = ({
           scrollToActivities={scrollToActivities}
           scrollToArticles={scrollToArticles}
           scrollToQuran={scrollToQuran}
+          scrollToContactUs={scrollToContactUs}
         />
         {/* <button>
           <img src={menu} alt="hamburger-menu" />
@@ -36,7 +38,7 @@ const NavBar = ({
           <button onClick={scrollToActivities}>نشاطتنا</button>
           <button onClick={scrollToArticles}>مقالات</button>
           <button onClick={scrollToQuran}>القرآن</button>
-          <button>اتصل بنا</button>
+          <button onClick={scrollToContactUs}>اتصل بنا</button>
         </div>
       </div>
     </nav>

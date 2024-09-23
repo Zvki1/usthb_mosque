@@ -15,8 +15,7 @@ function App() {
   const contactUsSection = useRef(null);
   const scrollToAbout = () => {
     aboutSection.current.scrollIntoView({ behavior: "smooth" });
-    console.log("scrolling");
-    console.log(aboutSection.current);
+    
   }
   const scrollToActivities = () => {
     activitiesSection.current.scrollIntoView({ behavior: "smooth" });
@@ -30,6 +29,7 @@ function App() {
   const scrollToContactUs = () => {
     contactUsSection.current.scrollIntoView({ behavior: "smooth" });
   }
+
   return (
     <div className="w-screen relative ">
       <HeroSection 

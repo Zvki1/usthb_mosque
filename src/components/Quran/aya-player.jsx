@@ -2,7 +2,7 @@
 import { StepForward, StepBack } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { Button } from "@/components/ui/button";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 
 export function AyaPlayer({
   audioRef,
@@ -50,7 +50,7 @@ export function AyaPlayer({
     if (audio) {
       audio.currentTime = newTime;
       setCurrentTime(newTime);
-      console.log(`Slider changed: New time is ${newTime}`);
+      // console.log(`Slider changed: New time is ${newTime}`);
     }
   };
 

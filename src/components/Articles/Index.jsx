@@ -1,10 +1,28 @@
 /* eslint-disable react/display-name */
 import subtitle from "../../assets/AboutUs/subtitle.svg";
 import { ActivitiesCarousel } from "../activities/ActivitiesCarousel";
-import {AcitivityComponent} from "../activities/acitivity-component";
 import logoBg from "../../assets/navbar/logoBg.svg";
-import { forwardRef } from "react";
-const Index = forwardRef((propos,ref) => {
+import { forwardRef, useEffect, useState } from "react";
+import axios from "axios";
+
+const Index = forwardRef((propos, ref) => {
+  const [articles, setArticles] = useState([]);
+  const [isGettingArticles, setIsGettingArticles] = useState(false);
+  useEffect(() => {
+    setIsGettingArticles(true);
+    axios
+      .get(import.meta.env.VITE_API_URL + "/articles/selected")
+      .then((response) => {
+        console.log(response.data.articles);
+        setArticles(response.data.articles);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(() => {
+        setIsGettingArticles(false);
+      });
+  }, []);
   return (
     <div className=" py-12 relative" ref={ref}>
       <div className="flex flex-col items-center gap-1 w-full relative z-10">
@@ -14,17 +32,21 @@ const Index = forwardRef((propos,ref) => {
           </h3>
           <img src={subtitle} alt="subtitle" className="w-full " />
         </div>
-        <div className="md:hidden">
-          <ActivitiesCarousel />
-        </div>
-        <div className="hidden md:flex flex-row gap-5 lg:gap-16 items-center justify-center pt-10">
-          <AcitivityComponent />
-          <AcitivityComponent />
-          <AcitivityComponent />
-        </div>
+
+        {isGettingArticles ? (
+          <div className=" h-96 flex items-center justify-center">
+            <p className=" text-4xl font-semibold text-titleBlue animate-pulse">جاري التحميل...</p>
+          </div>
+        ) : (
+          <ActivitiesCarousel data={articles} />
+        )}
       </div>
-      <div className="absolute  top-0 md:top-auto md:bottom-0 w-full  flex items-center justify-center " >
-      <img src={logoBg} alt="background" className=" w-full md:w-2/4 lg:w-4/12  opacity-80 rotate-180 md:rotate-0 " />
+      <div className="absolute  top-0 md:top-auto md:bottom-0 w-full  flex items-center justify-center ">
+        <img
+          src={logoBg}
+          alt="background"
+          className=" w-full md:w-2/4 lg:w-4/12  opacity-80 rotate-180 md:rotate-0 "
+        />
       </div>
     </div>
   );

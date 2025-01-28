@@ -11,7 +11,7 @@ const Index = forwardRef((props, ref) => {
     axios
       .get(import.meta.env.VITE_API_URL + "/activity/selected")
       .then((response) => {
-        console.log(response.data.activities);
+        // console.log(response.data.activities);
         setActivities(response.data.activities);
       })
       .catch((error) => {
@@ -42,16 +42,7 @@ const Index = forwardRef((props, ref) => {
           <ActivitiesCarousel data={activities} />
         )}
 
-      {/* <div className="hidden  md:flex flex-row gap-5 items-center justify-center pt-10">
-        {isGettingActivities ? (
-          Array.from({ length: 3 }).map((_, index) => <CardSkeleton key={index} />)
-        ) : (
-          activities.map((activity) => (
-            <AcitivityComponent key={activity.id} data={activity} />
-          ))
-        )  
-        }
-      </div> */}
+     
     </div>
   );
 });

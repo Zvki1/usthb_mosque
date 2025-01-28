@@ -25,7 +25,7 @@ export function ActivitiesCarousel({ data }) {
           <CarouselItem key={activity.id} className=" md:w-full md:basis-1/3">
             <div className="p-1 h-full">
               <Card className="border-0 h-full">
-                <CardContent className="flex  bg-red-500 rounded-lg h-full p-0 items-center ">
+                <CardContent className="flex   rounded-lg h-full p-0 items-center ">
                   <AcitivityComponent data={activity} />
                 </CardContent>
               </Card>

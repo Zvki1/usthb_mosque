@@ -6,7 +6,7 @@ export function AcitivityComponent(
   { data } 
 ) {
   return (
-    <div className="bg-white rounded-lg overflow-hidden shadow-lg w-full max-w-sm  rtl
+    <div className="bg-white rounded-lg overflow-hidden shadow-md w-full max-w-sm  rtl
     md:hover:scale-105 transition-transform duration-500 ease-in-out  flex-1 min-h-full min-w-full ">
       <div className="relative h-48 md:h-48">
         <img

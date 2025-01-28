@@ -9,17 +9,19 @@ const NavBar = ({
   scrollToArticles,
   scrollToQuran,
   scrollToContactUs,
+  scrollToLostItems,
 }) => {
   return (
     <nav className="relative z-10">
       <div className="md:hidden w-full flex justify-between items-center p-5">
         <img src={mobileLogo} alt="Logo" />
-        <MenuBurger 
+        <MenuBurger
           scrollToAbout={scrollToAbout}
           scrollToActivities={scrollToActivities}
           scrollToArticles={scrollToArticles}
           scrollToQuran={scrollToQuran}
           scrollToContactUs={scrollToContactUs}
+          scrollToLostItems={scrollToLostItems}
         />
         {/* <button>
           <img src={menu} alt="hamburger-menu" />
@@ -37,6 +39,7 @@ const NavBar = ({
           <button onClick={scrollToAbout}>حولنا</button>
           <button onClick={scrollToActivities}>نشاطتنا</button>
           <button onClick={scrollToArticles}>مقالات</button>
+          <button onClick={scrollToLostItems}>الأشياء المفقودة</button>
           <button onClick={scrollToQuran}>القرآن</button>
           <button onClick={scrollToContactUs}>اتصل بنا</button>
         </div>
